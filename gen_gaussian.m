@@ -1,10 +1,9 @@
 function img = gen_gaussian(img_coords, gauss_scats)
 %GEN_GAUSSIAN Gaussian scatterer image generation.
-%   IMG = GEN_GAUSSIAN(IMG_COORDS, GAUSS_SCATS) returns an N-by-N matrix containing pseudorandom values drawn
-%   from the standard normal distribution.  RANDN(M,N) or RANDN([M,N]) returns
-%   an M-by-N matrix. RANDN(M,N,P,...) or RANDN([M,N,P,...]) returns an
-%   M-by-N-by-P-by-... array. RANDN returns a scalar.  RANDN(SIZE(A)) returns
-%   an array the same size as A.
+%   IMG = GEN_GAUSSIAN(IMG_COORDS, GAUSS_SCATS) 
+%   GAUSS_SCATS is a N-by-6 matrix with the following row structure
+%       [A, x0, z0, sgm_x, sgm_z, theta]
+       
     X = img_coords(:,1);
     Z = img_coords(:,3);
     
